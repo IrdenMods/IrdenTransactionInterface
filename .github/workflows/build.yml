@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - '_metadata'
-      - 'CHANGELOG.txt'
+      - 'CHANGELOG.md'
       - '.github/workflows/build.yml'
 
 
