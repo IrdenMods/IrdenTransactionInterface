@@ -1,6 +1,5 @@
 .idea
 .luarc.json
 .vscode
-*.md
 *.ase
 *.aseprite
