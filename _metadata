@@ -1,0 +1,7 @@
+{
+  "author" : "D.",
+  "description" : "Набор скриптов для проведения транзакций объектам.",
+  "friendlyName" : "Irden Transaction Interface",
+  "name" : "IrdenTransactionInterface",
+  "version" : "1.0.0"
+}

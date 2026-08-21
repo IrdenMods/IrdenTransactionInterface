@@ -1,0 +1,103 @@
+{
+  "background": {
+    "zLevel": 0,
+    "type": "background",
+    "fileBody": "/interface/unsorted/irden/transaction/assets/ui/body/body.png",
+    "fileHeader": "/interface/unsorted/irden/transaction/assets/ui/body/header.png",
+    "fileFooter": ""
+  },
+  "lyt_description": {
+    "type": "layout",
+    "rect": [
+      2,
+      20,
+      117,
+      77
+    ],
+    "zlevel": 1,
+    "layoutType": "basic",
+    "children": {
+      "lbl_name": {
+        "type": "label",
+        "vAnchor": "top",
+        "hAnchor": "mid",
+        "value": "??????",
+        "wrapWidth": 100,
+        "fontSize": 8,
+        "position": [
+          57,
+          57
+        ]
+      },
+      "lbl_description": {
+        "type": "label",
+        "vAnchor": "top",
+        "hAnchor": "mid",
+        "value": "??????",
+        "wrapWidth": 100,
+        "fontSize": 8,
+        "position": [
+          57,
+          47
+        ]
+      }
+    }
+  },
+  "close": {
+    "type": "button",
+    "base": "/interface/x.png",
+    "hover": "/interface/xhover.png",
+    "pressed": "/interface/xpress.png",
+    "pressedOffset": [
+      0,
+      0
+    ],
+    "position": [
+      108,
+      79
+    ],
+    "zlevel": 1
+  },
+  "strimg_tbx_background": {
+    "type": "imageStretch",
+    "position": [
+      2,
+      2
+    ],
+    "size": [
+      102,
+      15
+    ],
+    "zlevel": 1,
+    "direction": "horizontal",
+    "stretchSet": {
+      "type": "stretch",
+      "begin": "/interface/unsorted/irden/transaction/assets/ui/stretch/frame/begin.png",
+      "inner": "/interface/unsorted/irden/transaction/assets/ui/stretch/frame/inner.png",
+      "end": "/interface/unsorted/irden/transaction/assets/ui/stretch/frame/end.png"
+    },
+    "children": {
+      "tbx_amount": {
+        "type": "textbox",
+        "regex": "^\\d*$",
+        "hint": "Ввод. Enter - отправить.",
+        "callback": "null",
+        "enterKey": "send",
+        "position": [
+          2,
+          3
+        ]
+      }
+    }
+  },
+  "btn_send": {
+    "type": "button",
+    "position": [
+      103,
+      2
+    ],
+    "base": "/interface/unsorted/irden/transaction/assets/ui/simple_button_small/enter.png:base",
+    "hover": "/interface/unsorted/irden/transaction/assets/ui/simple_button_small/enter.png:hover",
+    "callback": "send"
+  }
+}
