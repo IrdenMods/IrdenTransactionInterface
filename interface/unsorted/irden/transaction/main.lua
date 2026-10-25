@@ -47,8 +47,12 @@ function sendAmount(amount)
                         amount = amount
                     }
             ), function(result)
-                interface.queueMessage(result)
-                pane.dismiss()
+                if result then
+                    interface.queueMessage(result)
+                end
+                if not result then
+                    pane.dismiss()
+                end
             end,
             function(er)
                 chat.addMessage(er)
