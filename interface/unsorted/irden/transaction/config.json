@@ -1,6 +1,5 @@
 {
   "background": {
-    "zLevel": 0,
     "type": "background",
     "fileBody": "/interface/unsorted/irden/transaction/assets/ui/body/body.png",
     "fileHeader": "/interface/unsorted/irden/transaction/assets/ui/body/header.png",
@@ -10,9 +9,9 @@
     "type": "layout",
     "rect": [
       2,
-      20,
+      76,
       117,
-      77
+      133
     ],
     "zlevel": 1,
     "layoutType": "basic",
@@ -53,8 +52,8 @@
       0
     ],
     "position": [
-      108,
-      79
+      109,
+      145
     ],
     "zlevel": 1
   },
@@ -62,7 +61,7 @@
     "type": "imageStretch",
     "position": [
       2,
-      2
+      57
     ],
     "size": [
       102,
@@ -85,7 +84,12 @@
         "enterKey": "send",
         "position": [
           2,
-          3
+          2
+        ],
+        "maxWidth": 92,
+        "size": [
+          98,
+          11
         ]
       }
     }
@@ -93,11 +97,24 @@
   "btn_send": {
     "type": "button",
     "position": [
-      103,
-      2
+      104,
+      57
     ],
     "base": "/interface/unsorted/irden/transaction/assets/ui/simple_button_small/enter.png:base",
     "hover": "/interface/unsorted/irden/transaction/assets/ui/simple_button_small/enter.png:hover",
     "callback": "send"
+  },
+  "lyt_comment": {
+    "type": "layout",
+    "position": [
+      2,
+      2
+    ],
+    "layoutType": "basic",
+    "size": [
+      116,
+      52
+    ],
+    "children": {}
   }
 }

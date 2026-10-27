@@ -15,22 +15,34 @@ function init()
     ---@type Configuration
     self.data = config.getParameter("data")
     aggregateNameFromServer()
+    self.tbx = Textbox:setup("lyt_comment", {
+        hintColor = {255,255,255},
+        caretColor = {255,255,255},
+        scroll = {
+            scrollEnabled = true
+        },
+        onEnterKey = send
+    })
+    self.tbx:setHint("Комментарий")
 end
 
 function send(name, data)
     local amount = widget.getText(WIDGETS.TBX_AMOUNT)
     if not amount or amount == "" then
         interface.queueMessage("Значение не может быть пустым!")
+        return
     end
     sendAmount(amount)
 end
 
 function aggregateNameFromServer()
+    locker:lock()
     promises:add(
             world.sendEntityMessage("server", "irden:account:name", self.data.account),
             function(result)
                 widget.setText(WIDGETS.LBL_NAME, result[1])
                 widget.setText(WIDGETS.LBL_DESCRIPTION, result[2])
+                locker:unlock()
             end, function(er)
                 chat.addMessage(er)
                 pane.dismiss()
@@ -44,7 +56,8 @@ function sendAmount(amount)
             world.sendEntityMessage(
                     "server", "irden:account:transfer", {
                         account = self.data.account,
-                        amount = amount
+                        amount = amount,
+                        comment = self.tbx:getText()
                     }
             ), function(result)
                 if result then
@@ -68,3 +81,6 @@ end
 function uninit()
 
 end
+
+require("/interface/StarboundTextboxInterface/textarea/scripts/textbox.lua")
+require("/scripts/interface_locker/locker.lua")
