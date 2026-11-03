@@ -7,8 +7,7 @@ on:
       - '_metadata'
       - 'CHANGELOG.md'
 
-env:
-  MOD_NAME: "IrdenTransactionInterface"
+
 
 
 jobs:
@@ -20,3 +19,4 @@ jobs:
       release: true
       upload_to_gd: true
       notify_discord: true
+      mod_name: "IrdenTransactionInterface"
