@@ -13,7 +13,7 @@ env:
 
 jobs:
   build:
-    uses: IrdenMods/WorkflowRepo/.github/workflows/publish.yml
+    uses: IrdenMods/WorkflowRepo/.github/workflows/publish.yml@master
     secrets: inherit
     with:
       release: true
