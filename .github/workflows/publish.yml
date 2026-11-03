@@ -7,9 +7,6 @@ on:
       - '_metadata'
       - 'CHANGELOG.md'
 
-
-
-
 jobs:
   publish:
     permissions: write-all
